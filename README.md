@@ -6,7 +6,7 @@
 
 This repository contains the complete solution for the **MTCAIC3 Kaggle competition**, focusing on the classification of EEG brain signals for two distinct Brain-Computer Interface (BCI) tasks: **Motor Imagery (MI)** and **Steady-State Visually Evoked Potentials (SSVEP)**.
 
-**➡️ For the full code and step-by-step analysis, please see the [Kaggle Notebook here](رابط-النوت-بوك-الخاص-بك-على-كاجل).**
+**➡️ For the full code and step-by-step analysis, please see the [Full Notebook here](https://github.com/Jasmine25005/BCI-EEG-Signal-Classification-Competition-Solution/blob/main/mtcaic3-solution-high-accuracy-bci-with-csp-cca.ipynb).**
 
 ---
 
@@ -28,8 +28,9 @@ A `StratifiedGroupKFold` cross-validation strategy was used to ensure the models
 
 ### Signal Preprocessing
 A key first step was applying a **bandpass filter** to the raw EEG data to isolate relevant neural frequencies and remove noise. Different frequency bands were used for each task to align with their unique neural signatures.
-
-[ضع هنا صورة توضح الإشارة قبل وبعد الفلترة - Image of Raw vs. Filtered EEG Signal]
+<p align='center'>
+<img src='output.png' width='600' /img>
+</p>
 
 ### Classification Models
 * **For Motor Imagery (MI):** We used **Common Spatial Patterns (CSP)**, a powerful algorithm for EEG feature extraction, combined with a **Linear Discriminant Analysis (LDA)** classifier.
@@ -37,14 +38,18 @@ A key first step was applying a **bandpass filter** to the raw EEG data to isola
 
 ---
 
-## 🏆 Results
+# 🏆 Results & Competition Standing
+## The final solution performed strongly on the private leaderboard, placing in the top 40% of all competing teams. This result was achieved by developing specialized pipelines for each BCI task.
 
-The models were evaluated using a 5-fold cross-validation, and the final performance was measured by the macro F1-score.
+### Final Rank: `84 / 215` Teams 🏅
 
-* **Max Motor Imagery (MI) F1-Score:** `0.55`
-* **Max SSVEP F1-Score:** `0.6023`
-* **Final Combined Competition Score:** `0.56764`
+* **Final Combined Competition Score: `0.56764`**
 
+**The final score is a combination of the model performance on each task, evaluated using the macro F1-score:**
+
+* **Max Motor Imagery (MI) F1-Score: `0.55`**
+
+* **Max SSVEP F1-Score: `0.6023`**
 ---
 
 ## 🛠️ Tech Stack
@@ -60,12 +65,12 @@ The models were evaluated using a 5-fold cross-validation, and the final perform
 
 1.  **Clone the repository:**
     ```sh
-    git clone [https://github.com/your-username/BCI-EEG-Signal-Classification-Kaggle.git](https://github.com/your-username/BCI-EEG-Signal-Classification-Kaggle.git)
-    cd BCI-EEG-Signal-Classification-Kaggle
+    git clone https://github.com/Jasmine25005/BCI-EEG-Signal-Classification-Competition-Solution.git
+    cd BCI-EEG-Signal-Classification-Competition-Solution
     ```
 2.  **Install dependencies:**
     ```sh
     pip install pandas numpy scikit-learn mne scipy joblib matplotlib
     ```
 3.  **Explore the analysis:**
-    For a detailed walkthrough of the code, data processing, and results, please open the **[Kaggle Notebook](رابط-النوت-بوك-الخاص-بك-على-كاجل)**.
+    For a detailed walkthrough of the code, data processing, and results, please open the **[Full Notebook](https://github.com/Jasmine25005/BCI-EEG-Signal-Classification-Competition-Solution/blob/main/mtcaic3-solution-high-accuracy-bci-with-csp-cca.ipynb)**.
